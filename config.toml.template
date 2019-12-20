@@ -1,0 +1,118 @@
+###origin:
+#### github.com/rujews/maupassant-hugo
+
+
+###开启uglyurls, 兼容 typora 图片的相对路径!!
+uglyurls = true
+#googleAnalytics = "GA ID"
+
+
+###cd到本文件目录!执行git clone
+###git clone https://github.com/binaryHHH/hugo_theme themes/hugo_theme
+theme = "hugo_theme"
+
+#baseURL = "http://example.org/"
+baseURL = "http://localhost:1313"
+languageCode = "zh-CN"
+###站:主标题
+title = "Int-Han的博客"
+
+
+
+## 保持分类的原始名字（false会做转小写处理）
+preserveTaxonomyNames = true
+## 是否禁止URL Path转小写
+disablePathToLower = true
+
+###chine|japan |korea
+hasCJKLanguage = true
+
+###摘要
+summaryLength = 140
+
+[author]
+  name = "Int-Han"
+
+[params]
+  author = "Int-Han"
+  ###站:副标题
+  subtitle = "golang/微服务/python3/machine learning/deep learning/ c/c++ "
+  keywords = "a,b,c,meta,中,keyword,SEO"
+  description = "也在meta中,类似 一句说明"
+  ###文章访问计数
+  busuanzi = true
+  ###默认 google; 开启为本站搜索!
+  #localSearch = true
+
+#友链 [[ key ]] 数组,下面都是数组内的对象!
+[[params.links]]
+  title = "mouseover时 提示"
+  name = "直接显示"
+  url = "http://3e"
+[[params.links]]
+  title = "-"
+  name = "-"
+  url = ""
+
+#广告!
+[[params.ads]]
+  title = "ad"
+  url = "img可以不要!"
+
+[[params.ads]]
+  title = "ad"
+  url = ""
+  img = ""
+[[params.ads]]
+  title = "ad"
+  url = ""
+  img = ""
+
+#评论
+[params.utteranc]
+enable = true
+repo = "githubUsername/repo"    # 存储评论的Repo，格式为 owner/repo
+issueTerm = "pathname"  #表示你选择以那种方式让github issue的评论和你的文章关联。
+theme = "github-light" # 样式主题，有github-light和github-dark两种
+
+
+## 代码高亮 样式
+[markup]
+[markup.highlight]
+lineNos = true
+style = "github"
+
+    
+
+### 导航栏    
+[menu]
+#identifier标志符必须是唯一的，不能重复；weight用于排序，值越小越靠前。
+[[menu.main]]
+identifier = "archives"
+name = "归档"
+### 注意全局变量 uglyurls  对生成的url有影响 
+### true => ../a.html
+### false => ../a/ 
+
+url = "/archives_posts.html"
+weight = 2
+
+[[menu.main]]
+identifier = "archives_ml"
+name = "ML"
+url = "/archives_ml.html"
+weight = 3
+
+[[menu.main]]
+identifier = "about1"
+name = "关于"
+url = "/about.html"
+weight = 4
+
+
+
+### archive 的方式  (或者对应的 页面模板)
+### md的头中定义type --> 模板: themes/<aTheme>/layouts/<type>/single.html
+### 
+
+
